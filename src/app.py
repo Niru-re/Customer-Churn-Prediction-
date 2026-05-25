@@ -11,8 +11,8 @@ st.title("📊 Customer Churn Prediction Dashboard")
 st.write("Adjust the customer attributes below to see dynamic churn risk updates and data trends.")
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-model_path = os.path.join(base_dir, "models", "xgb_churn_model.pkl")
-data_path = os.path.join(base_dir, "data", "telco_customer_churn.csv")
+model_path = os.path.abspath(os.path.join(base_dir, "models", "xgb_churn_model.pkl"))
+data_path = os.path.abspath(os.path.join(base_dir, "data", "telco_customer_churn.csv"))
 
 # 1. Load the real dataset for dynamic analytics
 @st.cache_data
